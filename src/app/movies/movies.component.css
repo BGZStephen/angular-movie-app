@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+}
+
+.movies-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+h5 {
+  margin-top: 20px;
+}
+
+.movies-item {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+p {
+  padding: 0 20px;
+  flex-grow: 1;
+}
+
+a {
+  width: 140px;
+}

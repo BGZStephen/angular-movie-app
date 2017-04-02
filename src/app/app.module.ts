@@ -6,6 +6,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MoviesComponent } from './movies/movies.component';
+import { MovieSearchService } from "./services/movie-search.service"
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { MoviesComponent } from './movies/movies.component';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [MovieSearchService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
