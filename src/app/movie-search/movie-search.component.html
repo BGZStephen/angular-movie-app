@@ -1,8 +1,13 @@
 <div class="row movies-row">
-  <h2>Popular movies:</h2>
+  <h2>Results:</h2>
   <div class="col-md-3 movies-item" *ngFor="let movie of movies">
     <h5 style="min-height: 40px;"><a [routerLink]="['movie/', movie.id]">{{movie.title}}</a></h5>
-    <img src="https://image.tmdb.org/t/p/w185_and_h278_bestv2{{movie.poster_path}}" style="width: 100%" [routerLink]="['movie/', movie.id]">
+    <div *ngIf="movie.poster_path">
+      <img src="https://image.tmdb.org/t/p/w185_and_h278_bestv2{{movie.poster_path}}" style="width: 100%" [routerLink]="['movie/', movie.id]">
+    </div>
+    <div *ngIf="!movie.poster_path">
+      <div class="no-image">No preview image available</div>
+    </div>
     <p style="padding: 10px 5px">{{movie.overview}}</p>
     <a class="btn btn-primary movie-button" href="https://www.themoviedb.org/movie/{{movie.id}}">Check it out</a>
   </div>

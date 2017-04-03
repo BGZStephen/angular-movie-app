@@ -6,18 +6,26 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MoviesComponent } from './movies/movies.component';
-import { MovieSearchService } from "./services/movie-search.service"
+import { MovieSearchService } from "./services/movie-search.service";
+import { MovieSearchComponent } from './movie-search/movie-search.component';
+import { MovieIndividualComponent } from './movie-individual/movie-individual.component'
+import { routing } from "./app.routes";
+import { SearchComponent } from './search/search.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    MoviesComponent
+    MoviesComponent,
+    MovieSearchComponent,
+    MovieIndividualComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    routing
   ],
   providers: [MovieSearchService],
   bootstrap: [AppComponent]

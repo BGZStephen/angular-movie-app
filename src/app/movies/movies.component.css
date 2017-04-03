@@ -7,6 +7,10 @@
   flex-wrap: wrap;
 }
 
+h2 {
+  width: 100%;
+}
+
 h5 {
   margin-top: 20px;
 }
