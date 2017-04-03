@@ -19,9 +19,9 @@ export class MovieSearchComponent implements OnInit {
     this.activatedRoute.params
     .map(params => params['searchString'])
     .subscribe((searchString) => {
-      this.movieSearchService.searchMovie(searchString)
+      this.movieSearchService.searchMovies(searchString)
       .subscribe(movies => {
-        console.log(movies)
+        console.log(movies.id)
         this.movies = movies.results;
       })
     })

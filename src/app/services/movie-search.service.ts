@@ -19,8 +19,14 @@ export class MovieSearchService {
     .map(res => res.json());
   }
 
-  searchMovie(searchString) {
+  searchMovies(searchString) {
     this.searchUrl = 'https://api.themoviedb.org/3/search/multi?api_key='+this.apiKey+'&query='+searchString+'&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1'
+    return this.http.get(this.searchUrl)
+    .map(res => res.json());
+  }
+
+  searchMovie(id) {
+    this.searchUrl = 'https://api.themoviedb.org/3/movie/'+id+'?api_key='+this.apiKey+'&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1'
     return this.http.get(this.searchUrl)
     .map(res => res.json());
   }
