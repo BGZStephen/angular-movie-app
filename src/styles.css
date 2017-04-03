@@ -1,1 +1,280 @@
 /* You can add global styles to this file, and also import other style files */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+img {
+width: 100%;
+}
+
+/* NAVBAR */
+
+.navbar-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar {
+  align-items: center;
+  display: flex;
+  height: 60px;
+  width: 100%;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.navbar ul li {
+  padding: 20px 20px 20px 0;
+}
+
+.navbar ul li a {
+  color: #369;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+.navbar-logo {
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+/* NAVBAR  END */
+
+
+/* MAIN */
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.main-container > h1,
+.main-container > p {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+}
+
+.main-container > p {
+  font-size: 1.2em;
+}
+
+/* MAIN END */
+
+/* SEARCH */
+
+app-search {
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 600px;
+}
+
+.search-form {
+  width: 100%;
+}
+
+.search-input {
+  width: 70%;
+  font-size: 1em;
+  padding: 8px 15px;
+}
+
+.search-button {
+  border: 2px solid #369;
+  background: #369;
+  color: white;
+  font-size: 1em;
+  padding: 8px 15px;
+  width: 20%;
+}
+
+/* SEARCH END */
+
+/* POPULAR MOVIES */
+
+.searched-movies-container,
+.popular-movies-container {
+  margin-top: 30px;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.searched-movies-container > h2,
+.popular-movies-container > h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.movies-item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 20px 0;
+  background: #ddd;
+}
+
+.movies-item > h5 {
+  font-size: 1.3em;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.movies-item > h5 > a {
+  text-decoration: none;
+  color: #369;
+}
+
+.movies-item p {
+  text-align: left;
+  margin-bottom: 10px;
+  line-height: 1.8;
+  padding: 0 15px;
+}
+
+.movies-item img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.movie-item-button {
+  margin: 10px auto 20px;
+  text-decoration: none;
+  border: 2px solid #369;
+  background: #369;
+  color: white;
+  font-size: 1em;
+  padding: 8px 15px;
+  width: 140px;
+}
+
+/* POPULAR MOVIES END */
+
+/* INDIVIDUAL MOVIES START */
+
+.individual-movie-container {
+  margin-top: 30px;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.individual-movie-container > h2 {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.individual-movie-image {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.individual-movie-description {
+  width: 100%;
+  text-align: left;
+}
+
+.individual-movie-description > p {
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
+
+.individual-movie-description > a {
+  display: block;
+  margin: 30px 0;
+}
+
+.individual-movie-description > strong {
+  display: inline-block;
+  margin: 10px 0;
+}
+
+.individual-movie-description .movie-item-button {
+  text-align: center;
+  margin: 10px auto 20px;
+  text-decoration: none;
+  border: 2px solid #369;
+  background: #369;
+  color: white;
+  font-size: 1em;
+  padding: 8px 15px;
+  width: 140px;
+}
+
+.no-image {
+  margin: 0 0 20px;
+  min-height: 300px;
+  background: #aaa;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1.5em;
+}
+
+/* INDIVIDUAL MOVIE END */
+
+/* MEDIA QUERIES */
+
+@media (min-width: 768px) {
+  .movies-item {
+    width: 32%;
+  }
+
+  .individual-movie-image {
+    width: 20%;
+    margin-bottom: 20px;
+  }
+
+  .individual-movie-description {
+    width: 70%;
+    text-align: left;
+    padding-left: 30px;
+  }
+
+  .individual-movie-description > p {
+    font-size: 1.2em;
+  }
+
+  .individual-movie-description .movie-item-button {
+    text-align: center;
+    margin: 10px 0 20px;
+    text-decoration: none;
+    border: 2px solid #369;
+    background: #369;
+    color: white;
+    font-size: 1em;
+    padding: 8px 15px;
+    width: 140px;
+  }
+
+  .individual-movie-description > strong,
+  .individual-movie-description span {
+    font-size: 1.2em;
+  }
+}
+
+@media (min-width: 1024px) {
+  .movies-item {
+    width: 24%;
+  }
+}
